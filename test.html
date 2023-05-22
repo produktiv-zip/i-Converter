@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>i-Converter</title>
+</head>
+
+<body>
+
+    <h1>i-Converter</h1>
+
+    <form onsubmit="event.preventDefault(); convert();">
+        <label for="anzahl">Anzahl:</label>
+        <input type="number" id="anzahl" step="0.1">
+        <br><br>
+        <label for="einheit">Einheit:</label>
+        <select id="einheit">
+            <option value="apfel">Äpfel</option>
+            <option value="bj">Blowjobs</option>
+            <option value="muscheln">Muscheln</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Umrechnen">
+    </form>
+
+    <h2 id="ergebnis1"></h2>
+    <h2 id="ergebnis2"></h2>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
