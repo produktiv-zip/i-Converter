@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -8,23 +9,36 @@
 </head>
 
 <body>
-    
+
     <header>
         <h1>i-Converter</h1>
-
     </header>
 
     <main>
-        
-        <input name="anzahl_aepfel"></input>
-        <output name="ergebnis_bj"></output>
+        <form class="converter-form" onsubmit="event.preventDefault(); convert();">
+            <div class="form-group">
+                <label for="anzahl">Anzahl:</label>
+                <input type="number" id="anzahl" step="0.5">
+            </div>
+            <div class="form-group">
+                <label for="einheit">Einheit:</label>
+                <select id="einheit">
+                    <option value="apfel">Äpfel</option>
+                    <option value="bj">Blowjobs</option>
+                    <option value="muscheln">Muscheln</option>
+                </select>
+            </div>
+            <button type="submit">Umrechnen</button>
+        </form>
 
-        <py-script src="converter.py"></py-script>
-
+        <div class="result">
+            <h2 id="ergebnis1"></h2>
+            <h2 id="ergebnis2"></h2>
+        </div>
     </main>
+
+    <script src="script.js"></script>
 
 </body>
 
-<footer>
-
-</footer>
+</html>
